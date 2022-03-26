@@ -6,6 +6,14 @@
     <Nullable>enable</Nullable>
     <DebugType>embedded</DebugType>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <Description>Provides functionality for executing requests via proxy servers. The list of proxy servers and the selection algorithm is easily expanded by implementing the necessary interfaces. If the proxy server does not respond or the response does not pass user validation, the request is executed through the next available proxy server.</Description>
+    <Copyright>Jhayphal</Copyright>
+    <PackageProjectUrl>https://github.com/Jhayphal/ProxySharp</PackageProjectUrl>
+    <PackageIcon>database.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Jhayphal/ProxySharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>proxy</PackageTags>
+    <PackageId>$(AssemblyName)</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -15,5 +23,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="D:\database.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
