@@ -2,7 +2,7 @@
 
 namespace ProxySharp.Providers
 {
-	public class ProxyStorage : IProxyProvider
+	public sealed class ProxyStorage : IProxyProvider
 	{
 		public readonly string FileName;
 

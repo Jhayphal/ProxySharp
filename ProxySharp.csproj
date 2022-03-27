@@ -13,7 +13,12 @@
     <RepositoryUrl>https://github.com/Jhayphal/ProxySharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>proxy</PackageTags>
-    <PackageId>$(AssemblyName)</PackageId>
+    <PackageId>ProxySharpJ</PackageId>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <SignAssembly>False</SignAssembly>
+    <Version>1.0.1</Version>
+    <Authors>Jhayphal</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
