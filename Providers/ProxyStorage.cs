@@ -30,6 +30,11 @@ namespace ProxySharp.Providers
 			return (ProxyInfo[]?)serializer.Deserialize(stream) ?? Enumerable.Empty<ProxyInfo>();
 		}
 
+		public static bool Save(string fileName, IProxyProvider provider)
+		{
+			return Save(fileName, provider.Proxies);
+		}
+
 		public static bool Save(string fileName, IEnumerable<ProxyInfo> proxies)
 		{
 			try
@@ -48,11 +53,6 @@ namespace ProxySharp.Providers
 
 				return false;
 			}
-		}
-
-		public static bool Save(string fileName, IProxyProvider provider)
-		{
-			return Save(fileName, provider.Proxies);
 		}
 	}
 }
