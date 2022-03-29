@@ -6,9 +6,10 @@ Provides functionality for executing requests via proxy servers. The list of pro
 ```
 // Load if needed
 // var proxies = ProxyStorage.Load("proxies.xml");
+// var proxyList = new ProxyList(proxies);
 			
 // Or
-var proxies = new List<ProxyInfo> {
+var proxyList = new ProxyList {
   new ProxyInfo
   {
     Host = "1.1.1.1",
@@ -22,8 +23,6 @@ var proxies = new List<ProxyInfo> {
     Password = "password"
   },
 };
-
-var proxyList = new ProxyList(proxies);
 
 // Save if needed
 // ProxyStorage.Save("proxies.xml", proxyList);
@@ -51,6 +50,8 @@ For manual change proxy between requests use:
 ```
 manager.ChangeProxy();
 ```
+
+## Details
 
 You can implement a custom proxy provider by implementing the interface `IProxyProvider`. For example, your provider can parse a website with a free proxy list.
 
