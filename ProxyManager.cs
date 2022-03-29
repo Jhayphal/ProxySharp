@@ -67,8 +67,12 @@ namespace ProxySharp
 		/// <summary>
 		/// Run request to get the result.
 		/// </summary>
+		/// <remarks>
+		/// If the request fails or the validator return <c>False</c>, will try to run the request through the next proxy.
+		/// </remarks>
 		/// <param name="func">Request.</param>
 		/// <returns>Response.</returns>
+		/// <exception cref="InvalidOperationException">Has no valid proxies.</exception>
 		public async Task<HttpResponseMessage> RequestAsync(Func<HttpClient, Task<HttpResponseMessage>> func)
 		{
 			while (true)

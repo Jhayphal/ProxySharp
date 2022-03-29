@@ -12,13 +12,15 @@
     <PackageIcon>database.png</PackageIcon>
     <RepositoryUrl>https://github.com/Jhayphal/ProxySharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>proxy</PackageTags>
+    <PackageTags>proxy, proxypool</PackageTags>
     <PackageId>ProxySharpJ</PackageId>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <SignAssembly>False</SignAssembly>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>Jhayphal</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Added implementation of IEnumerable&lt;ProxyInfo&gt; interface to ProxyList class. Added README file.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -30,6 +32,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\..\Downloads\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="D:\database.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

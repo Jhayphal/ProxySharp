@@ -1,9 +1,11 @@
-﻿namespace ProxySharp.Providers
+﻿using System.Collections;
+
+namespace ProxySharp.Providers
 {
 	/// <summary>
 	/// A list of proxies.
 	/// </summary>
-	public class ProxyList : IProxyProvider
+	public class ProxyList : IProxyProvider, IEnumerable<ProxyInfo>
 	{
 		protected readonly HashSet<ProxyInfo> _proxies = new();
 
@@ -90,5 +92,16 @@
 				};
 			}
 		}
-	}
+
+        public IEnumerator<ProxyInfo> GetEnumerator()
+        {
+            foreach(var proxy in _proxies)
+				yield return proxy;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+    }
 }
