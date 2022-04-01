@@ -13,10 +13,10 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>proxy, proxypool</PackageTags>
     <PackageId>ProxySharpJ</PackageId>
-    <AssemblyVersion>1.0.6.0</AssemblyVersion>
-    <FileVersion>1.0.6.0</FileVersion>
+    <AssemblyVersion>1.0.7.0</AssemblyVersion>
+    <FileVersion>1.0.7.0</FileVersion>
     <SignAssembly>False</SignAssembly>
-    <Version>1.0.6</Version>
+    <Version>1.0.7</Version>
     <Authors>Jhayphal</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>Bugfix.</PackageReleaseNotes>
