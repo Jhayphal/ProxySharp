@@ -1,4 +1,6 @@
-﻿namespace ProxySharp.Providers
+﻿using System.Collections.Generic;
+
+namespace ProxySharp.Providers
 {
 	/// <summary>
 	/// Proxy list provider.

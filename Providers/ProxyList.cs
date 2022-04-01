@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ProxySharp.Providers
 {
@@ -7,7 +9,7 @@ namespace ProxySharp.Providers
 	/// </summary>
 	public class ProxyList : IProxyProvider, IEnumerable<ProxyInfo>
 	{
-		protected readonly HashSet<ProxyInfo> _proxies = new();
+		protected readonly HashSet<ProxyInfo> _proxies = new HashSet<ProxyInfo>();
 
 		public IEnumerable<ProxyInfo> Proxies => _proxies;
 

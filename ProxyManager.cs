@@ -1,4 +1,7 @@
 ﻿using ProxySharp.Providers.Selectors;
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace ProxySharp
 {

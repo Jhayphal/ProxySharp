@@ -1,4 +1,8 @@
-﻿namespace ProxySharp.Providers.Selectors
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace ProxySharp.Providers.Selectors
 {
 	public sealed class OnlyValidProxySelector : ProxySelectorBase
 	{

@@ -1,4 +1,6 @@
-﻿namespace ProxySharp.Providers.Selectors
+﻿using System;
+
+namespace ProxySharp.Providers.Selectors
 {
 	/// <summary>
 	/// Provides an algorithm for picking proxies from the list.

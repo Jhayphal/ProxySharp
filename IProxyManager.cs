@@ -1,4 +1,8 @@
-﻿namespace ProxySharp
+﻿using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+
+namespace ProxySharp
 {
     public interface IProxyManager<TClient, TResponse> : IDisposable
     {

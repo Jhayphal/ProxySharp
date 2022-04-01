@@ -1,4 +1,7 @@
-﻿namespace ProxySharp.Providers.Selectors
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace ProxySharp.Providers.Selectors
 {
     public sealed class PrioritizeBestRatingProxySelector : ProxySelectorBase
     {
