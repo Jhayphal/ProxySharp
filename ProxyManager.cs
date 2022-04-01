@@ -135,6 +135,8 @@ namespace ProxySharp
         /// <param name="e">New proxy.</param>
         private void SetWebProxy(object sender, ProxyInfo e)
         {
+            _httpClientHandler?.Dispose();
+
             _httpClientHandler = new HttpClientHandler
             {
                 Proxy = e.ToWebProxy()
@@ -154,7 +156,11 @@ namespace ProxySharp
 
             _httpClient?.Dispose();
 
-            _httpClient = new HttpClient(_httpClientHandler, disposeHandler: true);
+            _httpClient = new HttpClient
+            (
+                handler: _httpClientHandler, 
+                disposeHandler: false
+            );
 
             _configure?.Invoke(_httpClient);
         }
@@ -162,6 +168,7 @@ namespace ProxySharp
         public void Dispose()
         {
             _httpClient?.Dispose();
+            _httpClientHandler?.Dispose();
         }
     }
 }
