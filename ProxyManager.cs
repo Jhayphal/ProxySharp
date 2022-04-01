@@ -149,10 +149,10 @@ namespace ProxySharp
         /// <exception cref="ArgumentNullException">Fires when the proxy is not set.</exception>
         private void CreateAndConfigureClient()
         {
-            _httpClient?.Dispose();
-
             if (_httpClientHandler == null)
-                throw new ArgumentNullException(nameof(_httpClientHandler));
+                SetWebProxy(_selector, _selector.Current);
+
+            _httpClient?.Dispose();
 
             _httpClient = new HttpClient(_httpClientHandler, disposeHandler: true);
 
