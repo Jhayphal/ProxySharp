@@ -34,7 +34,7 @@ namespace ProxySharp.Providers.Selectors
 
 		public virtual void SetCurrent()
 		{
-			if (Current == null)
+			if (Current == null || Current == ProxyInfo.Empty)
 			{
 				var enumerator = GetActual().GetEnumerator();
 

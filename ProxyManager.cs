@@ -150,7 +150,7 @@ namespace ProxySharp
         private void CreateAndConfigureClient()
         {
             if (_httpClientHandler == null)
-                SetWebProxy(_selector, _selector.Current);
+                throw new ArgumentNullException(nameof(_httpClientHandler));
 
             _httpClient?.Dispose();
 
