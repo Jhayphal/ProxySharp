@@ -1,4 +1,5 @@
-﻿using System.Xml.Serialization;
+﻿using System.Net;
+using System.Xml.Serialization;
 
 namespace ProxySharp
 {
@@ -70,6 +71,16 @@ namespace ProxySharp
 		public override string ToString()
 		{
 			return $"{Host?.Trim()}:{Port}";
+		}
+
+		public virtual WebProxy ToWebProxy()
+        {
+			var webProxy = new WebProxy(Host, Port);
+
+			if (HasCredentials)
+				webProxy.Credentials = new NetworkCredential(UserName, Password);
+
+			return webProxy;
 		}
 	}
 }
