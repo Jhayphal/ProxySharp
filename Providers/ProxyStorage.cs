@@ -29,9 +29,9 @@ namespace ProxySharp.Providers
 				return Enumerable.Empty<ProxyInfo>();
 
 			var serializer = new XmlSerializer(typeof(ProxyInfo[]));
-			using var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
 
-			return (ProxyInfo[]?)serializer.Deserialize(stream) ?? Enumerable.Empty<ProxyInfo>();
+			using (var stream = new FileStream(fileName, FileMode.Open, FileAccess.Read))
+				return (ProxyInfo[])serializer.Deserialize(stream) ?? Enumerable.Empty<ProxyInfo>();
 		}
 
 		public static bool Save(string fileName, IProxyProvider provider)
@@ -46,8 +46,9 @@ namespace ProxySharp.Providers
 				var data = proxies.ToArray();
 
 				var serializer = new XmlSerializer(data.GetType());
-				using var stream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
-				serializer.Serialize(stream, data);
+
+				using (var stream = new FileStream(fileName, FileMode.Create, FileAccess.Write))
+					serializer.Serialize(stream, data);
 
 				return true;
 			}

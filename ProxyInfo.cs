@@ -14,17 +14,17 @@ namespace ProxySharp
 		public int Port { get; set; }
 
 		[XmlElement(IsNullable = false)]
-		public string? UserName { get; set; }
+		public string UserName { get; set; }
 
 		[XmlElement(IsNullable = false)]
-		public string? Password { get; set; }
+		public string Password { get; set; }
 
 		public int FailsCount { get; set; }
 
 		public int UsedCount { get; set; }
 
 		[XmlIgnore]
-		public Exception? LastException { get; set; }
+		public Exception LastException { get; set; }
 
 		[XmlIgnore]
 		public bool IsEmpty => string.IsNullOrEmpty(Host) || Port == 0;
@@ -39,7 +39,7 @@ namespace ProxySharp
 
 		public static ProxyInfo Empty { get; } = new ProxyInfo();
 
-		public bool Equals(ProxyInfo? obj)
+		public bool Equals(ProxyInfo obj)
 		{
 			if (obj == null)
 				return false;
@@ -50,7 +50,7 @@ namespace ProxySharp
 				&& string.Equals(Password, obj.Password);
 		}
 
-		public override bool Equals(object? obj)
+		public override bool Equals(object obj)
 		{
 			if (obj == null)
 				return false;

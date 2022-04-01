@@ -10,6 +10,6 @@ namespace ProxySharp.Providers
 		/// <summary>
 		/// List of proxies.
 		/// </summary>
-		public IEnumerable<ProxyInfo> Proxies { get; }
+		IEnumerable<ProxyInfo> Proxies { get; }
 	}
 }

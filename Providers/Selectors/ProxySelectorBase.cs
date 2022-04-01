@@ -8,7 +8,7 @@ namespace ProxySharp.Providers.Selectors
 	{
 		protected ProxyInfo _current = ProxyInfo.Empty;
 
-		public event EventHandler<ProxyInfo>? CurrentChanged;
+		public event EventHandler<ProxyInfo> CurrentChanged;
 
 		public ProxyInfo Current
 		{

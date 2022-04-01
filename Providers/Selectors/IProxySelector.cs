@@ -10,7 +10,7 @@ namespace ProxySharp.Providers.Selectors
 		/// <summary>
 		/// Fired when the current proxy changes.
 		/// </summary>
-		event EventHandler<ProxyInfo>? CurrentChanged;
+		event EventHandler<ProxyInfo> CurrentChanged;
 
 		/// <summary>
 		/// Proxy list provider.

@@ -9,6 +9,7 @@ namespace ProxySharp.Providers
 	/// </summary>
 	public class ProxyList : IProxyProvider, IEnumerable<ProxyInfo>
 	{
+		protected readonly char[] Separator = new char[] { ':' };
 		protected readonly HashSet<ProxyInfo> _proxies = new HashSet<ProxyInfo>();
 
 		public IEnumerable<ProxyInfo> Proxies => _proxies;
@@ -72,7 +73,7 @@ namespace ProxySharp.Providers
 			{
 				try
 				{
-					parts = line.Split(':', StringSplitOptions.RemoveEmptyEntries);
+					parts = line.Split(Separator, StringSplitOptions.RemoveEmptyEntries);
 
 					if (parts.Length != 2)
 						continue;

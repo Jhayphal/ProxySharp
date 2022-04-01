@@ -11,10 +11,10 @@ namespace ProxySharp
     public sealed class ProxyManager : IProxyManager<HttpClient, HttpResponseMessage>
     {
         private readonly IProxySelector _selector;
-        private Func<HttpResponseMessage, Task<bool>>? _validateAsync;
-        private Action<HttpClient>? _configure;
-        private HttpClient? _httpClient;
-        private HttpClientHandler? _httpClientHandler;
+        private Func<HttpResponseMessage, Task<bool>> _validateAsync;
+        private Action<HttpClient> _configure;
+        private HttpClient _httpClient;
+        private HttpClientHandler _httpClientHandler;
 
         /// <summary>
         /// Create new instance.
@@ -133,7 +133,7 @@ namespace ProxySharp
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">New proxy.</param>
-        private void SetWebProxy(object? sender, ProxyInfo e)
+        private void SetWebProxy(object sender, ProxyInfo e)
         {
             _httpClientHandler = new HttpClientHandler
             {
