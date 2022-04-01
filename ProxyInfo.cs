@@ -76,7 +76,12 @@ namespace ProxySharp
 
 		public virtual WebProxy ToWebProxy()
         {
-			var webProxy = new WebProxy(Host, Port);
+			var webProxy = new WebProxy
+			{
+				Address = new Uri($"http://{Host}:{Port}"),
+				BypassProxyOnLocal = false,
+				UseDefaultCredentials = false
+			};
 
 			if (HasCredentials)
 				webProxy.Credentials = new NetworkCredential(UserName, Password);
