@@ -14,13 +14,13 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>proxy, proxypool</PackageTags>
     <PackageId>ProxySharpJ</PackageId>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
     <SignAssembly>False</SignAssembly>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Jhayphal</Authors>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageReleaseNotes>Added implementation of IEnumerable&lt;ProxyInfo&gt; interface to ProxyList class. Added README file.</PackageReleaseNotes>
+    <PackageReleaseNotes>Adds netstandard 2.1 target platform. Adds interface Proxy Manager. Updates proxy change.</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -29,6 +29,14 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
